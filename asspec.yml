@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - echo "Installing npm dependencies..."
+      - npm install
+  build:
+    commands:
+      - echo "Building Angular project..."
+      - npm run build -- --prod
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist/
