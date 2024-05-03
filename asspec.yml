@@ -14,5 +14,5 @@ phases:
       - npm run build -- --prod
 artifacts:
   files:
-    - '**/*'
-  base-directory: dist/
+    - 'dist/**/*'
+  base-directory: ''
